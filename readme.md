@@ -6,12 +6,28 @@
 * `git add [key]|[file_name]` - добавить файл в папке к репозиторию ключи:
     * `all` - все файлы в данной папке
     * `.` - всю текущую папку
+* `git restore --staged <file>` - убрать файл из staging area
+  * `git restore --staged .` - всю текущую папку
+  * `git restore --hard <файл>` - конкретный файл
+* `git diff` - разница между коммитами
+* `git reset --staged <файл>` - конкретный файл
+  * `git reset --hard <более ранний коммит>` - вернуть к более раннему коммиту
+* `git reset --hard <commit hash>` - вернуть состояние репозитория к более раннему
+  
+  ![gitReset](sources/gitReset.png)
 * `git commit -m "<Описание>"` - зафиксировать изменения в репозитории
+  * `git commit --amend --no-edit` - добавление в коммит изменений без изменения его описания
+  * `git commit --amend -m "Новое сообщение"` - добавление в коммит изменений с заменой его описания 
 * `git log` - история изменений репозитория
 * `git push -u origin master` - пуш в мастер
 * `git remote add origin https://github.com/YandexPracticum/first-project.git` — привяжи локальный репозиторий к удалённому с URL https://github.com/YandexPracticum/first-project.git;
 * `git remote -v` (от англ. verbose, «подробный») — проверь, что репозитории действительно связались;
 * `git push -u origin main` (от англ. push, «толкать») — в первый раз загрузи все коммиты из локального репозитория в удалённый с названием origin.
+* `git checkout main` перешли в main
+* `git pull` подтянули новые изменения в main
+* `git checkout my-branch` вернулись в рабочую ветку my-branch
+* `git merge main` влили main в новую ветку my-branch
+* `git push -u origin my-branch` отправили ветку my-branch в удалённый репозиторий
 
 ## Сущности git
 
